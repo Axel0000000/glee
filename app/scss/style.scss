@@ -96,4 +96,95 @@
 }
 /*------------------------------------------------*/
 
+
+/*------------------------------------------------*/
+.footer a{
+   display: inline-block;
+   color: $default;
+   @extend %rubik-400;
+}
+
+.footer-top{
+   padding: 75px 0;
+   display: flex;
+   border-bottom: 1px solid #dae4e9;
+   &__title{
+      font-size: 16px;
+      line-height: 21px;
+      @extend %dmsans-700;
+      text-transform: uppercase;
+      color: #1f2044;
+      margin: 16px 0 20px;
+   }
+   &__contact{
+      width: 195px;
+      margin-right: 100px;
+   }
+   &__services{
+      width: 130px;
+      margin-right: 175px;
+   }
+   &__account{
+      width: 130px;
+      margin-right: auto;
+   }
+   &__news{
+      width: 270px;
+   }
+   &__link{
+      margin-bottom: 10px;
+   }
+   &__news-subscr{
+      margin-bottom: 35px;
+   }
+   &__news-form{
+      display: flex;
+   }
+   &__input{
+      padding: 0 15px;
+      border: none;
+      background: #fef7f0;
+      max-width: 170px;
+      height: 38px;
+      font-size: 12px;
+      line-height: 38px;
+   }
+   &__input::placeholder{
+      color: #234969;
+   }
+   &__button{
+      border: none;
+      padding: 0;
+      background: $buttons;
+      width: 100px;
+      height: 38px;
+      color: #fff;
+      cursor: pointer;
+   }
+}
+
+.footer-logo{
+   display: block;
+   margin-bottom: 11px;
+}
+
+.footer-bottom{
+   height: 90px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   &__nav{
+      display: flex;
+   }
+   &__nav-item{
+      line-height: 16px;
+   }
+   &__nav-item + .footer-bottom__nav-item{
+      padding-left: 15px;
+      margin-left: 15px;
+      border-left: 1px solid $default;
+   }
+}
+
+/*------------------------------------------------*/
 @import 'media';
