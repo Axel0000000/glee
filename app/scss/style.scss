@@ -1,6 +1,7 @@
 @import 'vars';
 @import 'fonts';
 @import 'reset';
+@import 'libs';
 @import 'global';
 
 /*------------------------------------------------*/
@@ -94,8 +95,6 @@
       background-color: #a3bbc8;
    }
 }
-/*------------------------------------------------*/
-
 
 /*------------------------------------------------*/
 .footer a{
@@ -187,4 +186,94 @@
 }
 
 /*------------------------------------------------*/
+.intro-slider{
+   background-color: $accent;
+   &__inner{
+      height: 100vh;
+      background-image: url('../images/intro-slider-bg.png');
+      background-repeat: no-repeat;
+      background-position: right;
+      position: relative;
+   }
+   &__container{
+      max-width: 1430px;
+      padding: 0 15px;
+      margin: 0 auto;
+   }
+   &__item-inner{
+      display: flex;
+      justify-content: space-between;
+      padding: 210px 115px 0;
+   }
+   &__content{
+      width: 500px;
+   }
+   &__title{
+      font-size: 72px;
+      line-height: 78px;
+      text-transform: uppercase;
+      color: $title;
+      @extend %rubik-500;
+      margin-bottom: 35px;
+   }
+   &__text{
+      width: 370px;
+      font-size: 18px;
+      line-height: 30px;
+      @extend %rubik-400;
+      color: $logo;
+      margin-bottom: 35px;
+   }
+   &__link{
+      display: flex;
+      align-items: center;
+      font-size: 15px;
+      @extend %rubik-500;
+      color: #fff;
+      background-color: $buttons;
+      width: 200px;
+      height: 60px;
+      padding: 0 16px 0 26px;
+      position: relative;
+   }
+   &__link::after{
+      content: '';
+      width: 22px;
+      height: 9px;
+      background-image: url('../images/icons/arrow-btn.svg');
+      position: absolute;
+      top: center;
+      right: 16px;
+   }
+   .slick-dots{
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      left: 50%;
+      right: 50%;
+      bottom: 75px;
+      li{
+         line-height: 0;
+         padding: 0 6px;
+         button{
+            padding: 0;
+            border: none;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background-color: #fde3cc;
+            font-size: 11px;
+            @extend %rubik-500;
+            color: #667983;
+         }
+         &.slick-active{
+            button{
+               background-color: #fff;
+               color: $title;
+            }
+         }
+      }
+   }
+}
+
 @import 'media';
