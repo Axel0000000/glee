@@ -21,3 +21,31 @@ body{
    margin: 0 auto;
    padding: 0 15px;
 }
+
+.title{
+   font-size: 36px;
+   @extend %dmsans-700;
+   color: $title-accent;
+   text-align: center;
+}
+
+.gallery-buttons{
+   text-align: center;
+   &__btn{
+      padding: 0;
+      border: none;
+      background: transparent;
+      font-size: 16px;
+      @extend %dmsans-700;
+      color: $default;
+      cursor: pointer;
+   }
+   &__btn.mixitup-control-active{
+      color: rgb(26, 26, 26);
+   }
+   &__btn + .gallery-buttons__btn{
+      margin-left: 30px;
+   }
+}
+
+ 
