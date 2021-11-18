@@ -400,4 +400,67 @@
    }
 }
 
+.lamps{
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   grid-template-rows: minmax(390px, auto);
+   grid-gap: 30px;
+   margin-bottom: 30px;
+   padding-top: 120px;
+   &__item{
+      background-color: #feefe2;
+      display: flex;
+      justify-content: right;
+      align-items: center;
+      padding: 10px 145px 10px 10px;
+      position: relative;
+   }
+   &__item-image{
+      position: absolute;
+      left: 135px;
+      bottom: 85px;
+   }
+   &__item-content{
+      color: $title;
+      max-width: 335px;
+   }
+   &__item-title{
+      font-size: 26px;
+      line-height: 32px;
+      @extend %dmsans-700;
+      margin-bottom: 15px;
+   }
+   &__item-descr{
+      font-size: 16px;
+      line-height: 30px;
+      @extend %rubik-400;
+      margin-bottom: 35px;
+   }
+   &__item-link{
+      font-size: 15px;
+      @extend %rubik-500;
+      color: $logo;
+      display: inline-block;
+      padding: 0 18px;
+      display: flex;
+      justify-content: left;
+      align-items: center;
+      width: 180px;
+      height: 60px;
+      border: 1px solid rgb(67, 99, 114, 0.4);
+      border-radius: 5px;
+      position: relative;
+   }
+   &__item-link::after{
+      content: '';
+      position: absolute;
+      width: 22px;
+      height: 9px;
+      background-image: url('../images/icons/arrow-btn-blue.svg');
+      top: auto;
+      right: 18px;
+   }
+}
+
 @import 'media';
+ 
