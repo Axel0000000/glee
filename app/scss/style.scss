@@ -462,5 +462,43 @@
    }
 }
 
+.design{
+   padding-top: 70px;
+   margin-bottom: 120px;
+   &__title{
+      margin-bottom: 35px;
+   }
+   &__gallery-buttons{
+      margin-bottom: 75px;
+   }
+   &__gallery{
+      display: grid;
+      grid-template-columns: repeat(3, 370px);
+      grid-template-rows: repeat(2, 246px);
+      grid-column-gap: 30px;
+      grid-row-gap: 34px;
+   }
+   &__gallery-item{
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      padding: 35px; 
+   }
+   &__gallery-title{
+      font-size: 20px;
+      line-height: 26px;
+      @extend %dmsans-700;
+      color: $title-accent;
+      max-width: 175px;
+      margin-bottom: 10px;
+   }
+   &__gallery-subtitle{
+      font-size: 16px;
+      line-height: 22px;
+      @extend %dmsans-700;
+      color: $buttons;
+   }
+}
+
 @import 'media';
  
