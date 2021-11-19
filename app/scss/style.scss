@@ -500,5 +500,22 @@
    }
 }
 
+.design-video{
+   height: 500px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   &__link path,
+   &__link circle{
+      transition: all .4s;
+   }
+   &__link:hover path{
+      fill: rgba(0, 0, 0, 0.8);
+   }
+   &__link:hover circle{
+      fill-opacity: 0.3;
+   }
+}
+
 @import 'media';
  

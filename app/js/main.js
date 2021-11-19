@@ -7,10 +7,6 @@ $(function(){
       autoplay: true
    })
 
-   // var mixer1 = mixitup('.products__gallery-items');
-
-   // var mixer2 = mixitup('.design__gallery');
-
    var containerEl1 = document.querySelector('[data-ref="container-1"]');
    var containerEl2 = document.querySelector('[data-ref="container-2"]');
   
