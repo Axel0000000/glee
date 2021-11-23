@@ -7,15 +7,6 @@ $(function(){
       autoplay: true
    });
 
-   $('.insights__slider').slick({
-      arrows: false,
-      slidesToShow: 3,
-      slidesToScroll: 2,
-      speed: 1000,
-      autoplay: true,
-      autoplaySpeed: 2000
-   });
-
    var containerEl1 = document.querySelector('[data-ref="container-1"]');
    var containerEl2 = document.querySelector('[data-ref="container-2"]');
   
