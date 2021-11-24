@@ -776,5 +776,39 @@
    }
 }
 
+.conditions{
+   padding-top: 115px;
+   &__item{
+      margin-bottom: 70px;
+      &:last-child{
+         margin: 0;
+      }
+   }
+   &__item-title{
+      font-size: 24px;
+      line-height: 40px;
+      @extend %rubik-500;
+      color: $title;
+      margin-bottom: 20px;
+   }
+   &__item-list{
+      padding-left: 18px;
+   }
+   &__list-item{
+      margin-bottom: 16px;
+      padding-left: 6px;
+      &:last-child{
+         margin: 0;
+      }
+   }
+   &__list-item,
+   &__item-text{
+      font-size: 16px;
+      line-height: 30px;
+      @extend %rubik-400;
+      color: $title;
+   }
+}
+
 /*------------------------------------------------*/
 @import 'global';
