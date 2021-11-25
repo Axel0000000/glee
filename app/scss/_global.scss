@@ -29,6 +29,13 @@ body{
    color: $title-accent;
    text-align: center;
 }
+.title-alt{
+   font-size: 36px;
+   line-height: 42px;
+   @extend %dmsans-700;
+   color: $title;
+   text-align: left;
+}
 
 .gallery-buttons{
    text-align: center;
