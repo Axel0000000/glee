@@ -1,5 +1,17 @@
 $(function(){
 
+   $('.product-list__item-btn').on('click', function(){
+      $('.product-list__item-btn').addClass('product-list__item-btn--active')
+   });
+
+   $('.product-list__item-btn').on('click', function(){
+      $('.product-list__item-buttons').addClass('product-list__item-buttons--active')
+   });
+   $('.button-cart').on('click', function(){
+      $('.product-list__item-btn').removeClass('product-list__item-btn--active'),
+      $('.product-list__item-buttons').removeClass('product-list__item-buttons--active')
+   });
+
    $('.intro-slider__inner').slick({
       dots: true,
       arrows: false,
@@ -23,13 +35,21 @@ $(function(){
    });
 
    $(".star").rateYo({
-      rating: 3.6,
       starWidth: "12px",
       normalFill: "#d6d6d6",
       ratedFill: "#ffcc00",
       readOnly: true,
       fullStar: true,
       spacing: "4px",
+    });
+
+    $(".product-list__star").rateYo({
+      starWidth: "20px",
+      normalFill: "#d6d6d6",
+      ratedFill: "#ffcc00",
+      readOnly: true,
+      fullStar: true,
+      spacing: "10px",
     });
 
    var containerEl1 = document.querySelector('[data-ref="container-1"]');
