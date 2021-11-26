@@ -12,16 +12,19 @@ body{
    flex-direction: column;
 }
 
+/*------------------------------------------------*/
 .main{
    flex: 1 1 auto;
 }
 
+/*------------------------------------------------*/
 .container{
    max-width: 1200px;
    margin: 0 auto;
    padding: 0 15px;
 }
 
+/*------------------------------------------------*/
 .title{
    font-size: 36px;
    line-height: 48px;
@@ -37,6 +40,7 @@ body{
    text-align: left;
 }
 
+/*------------------------------------------------*/
 .gallery-buttons{
    text-align: center;
    &__btn{
@@ -60,6 +64,7 @@ body{
    }
 }
 
+/*------------------------------------------------*/
 .button{
    color: #fff;
    background-color: $buttons;
@@ -68,3 +73,40 @@ body{
 .button:hover{
    background-color: $title;
 }
+
+/*------------------------------------------------*/
+.pagination{
+      display: flex;
+   &__list{
+      display: flex;
+   }
+   &__list-item{
+      margin-right: 15px;
+      .pagination__list-link{
+         width: 50px;
+         height: 50px;
+      }
+   }
+   &__list-link,
+   &__next{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $title;
+      border: 1px solid $buttons;
+   }
+   &__list-link--active{
+      background-color: $buttons;
+      color: #fff;
+   }
+   &__next{
+      padding: 0 20px;
+   }
+}
+
+/*------------------------------------------------*/
+.partners--active{
+   padding: 90px 0;
+}
+
+/*------------------------------------------------*/
