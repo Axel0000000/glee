@@ -1,16 +1,37 @@
 $(function(){
 
-   $('.product-list__item-btn').on('click', function(){
-      $('.product-list__item-btn').addClass('product-list__item-btn--active')
+   $('.product-slide__vertical').slick({
+      asNavFor: '.product-slide__big',
+      focusOnSelect: true,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      arrows: false, 
+      vertical: true,
+      draggable: false  
+   });
+   $('.product-slide__big').slick({
+      asNavFor: '.product-slide__vertical',
+      arrows: false,
+      draggable: false,
+      fade: true
    });
 
-   $('.product-list__item-btn').on('click', function(){
-      $('.product-list__item-buttons').addClass('product-list__item-buttons--active')
+   $('.product-detail__item-btn').on('click', function(){
+      $('.product-detail__item-btn').addClass('product-detail__item-btn--active'),
+      $('.product-detail__item-buttons').addClass('product-detail__item-buttons--active')
+      $('.button-cart').addClass('icon-buttons__item--active')
    });
+
    $('.button-cart').on('click', function(){
-      $('.product-list__item-btn').removeClass('product-list__item-btn--active'),
-      $('.product-list__item-buttons').removeClass('product-list__item-buttons--active')
+      $('.product-detail__item-btn').removeClass('product-detail__item-btn--active'),
+      $('.product-detail__item-buttons').removeClass('product-detail__item-buttons--active')
    });
+
+   $('.icon-buttons__item').on('click', function(){
+      $(this).toggleClass('icon-buttons__item--active')
+   });
+
+   $('.product-detail__input').styler();
 
    $('.intro-slider__inner').slick({
       dots: true,
@@ -21,7 +42,6 @@ $(function(){
 
    $(".filter-price__input").ionRangeSlider({
       type: 'double',
-      prefix: '$',
       
       onStart: function (data) {
          $('.filter-price__from').text(data.from);
@@ -43,7 +63,7 @@ $(function(){
       spacing: "4px",
     });
 
-    $(".product-list__star").rateYo({
+    $(".product-detail__star").rateYo({
       starWidth: "20px",
       normalFill: "#d6d6d6",
       ratedFill: "#ffcc00",
