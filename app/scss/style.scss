@@ -394,10 +394,10 @@
    flex-direction: column;
    justify-content: flex-end;
    height: 380px;
-   max-width: 270px;
+   width: 270px;
    padding: 20px 5px 35px;
    text-align: center;
-   box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+   box-shadow: 0 0 15px rgba(37, 37, 37, 0.07);
    position: relative;
    border-radius: 8px;
    &__top{
@@ -755,6 +755,28 @@
       justify-content: space-between;
       padding-bottom: 30px;
       border-bottom: 2px solid #f6f6f6;
+   }
+   &__input-check{
+      @extend %checkbox-hidden;
+      &:checked + .modal__remember-checkbox{
+         background-image: url('../images/icons/login-check.svg');
+         background-position: center;
+         background-repeat: no-repeat;
+      }
+   }
+   &__remember{
+      padding-left: 28px;
+      position: relative;
+      cursor: pointer;
+   }
+   &__remember-checkbox{
+      width: 14px;
+      height: 14px;
+      border-radius: 2px;
+      background-color: #ebebeb;
+      position: absolute;
+      left: 0;
+      top: 2px;
    }
    &__remember,
    &__link-lost,
@@ -1307,6 +1329,7 @@
 .product-item{
    &__inner{
       display: flex;
+      margin-bottom: 75px;
    }
    &__slide{
       min-width: 550px;
@@ -1350,5 +1373,90 @@
       align-items: center;
    }
 }
+
+/*------------------------------------------------*/
+.product-tabs{
+   font-size: 16px;
+   line-height: 30px;
+   @extend %rubik-400;
+   color: $title;
+   &__top{
+      display: flex;
+      justify-content: center;
+   }
+   &__top-link{
+      font-size: 18px;
+      line-height: 40px;
+      @extend %rubik-500;
+      color: $title;
+      width: 240px;
+      padding: 7px 0;
+      margin: 0 5px;
+      background-color: #edf1f4;
+      border-radius: 5px;
+      text-align: center;
+      margin-bottom: 35px;
+   }
+   &__top-link--active{
+      color: #fff;
+      background-color: $buttons;
+   }
+   &__content-item{
+      display: none;
+   }
+   &__content-item.product-tabs__content-item--active{
+      display: block;
+   }
+}
+
+/*------------------------------------------------*/
+.related{
+   padding-top: 110px;
+  &__slider{
+     margin-bottom: -15px;
+  }
+   &__title{
+      text-align: left;
+      margin-bottom: 60px;
+   }
+   &__slider-inner{
+      margin: 0 -15px;
+      button.slick-arrow{
+         background-position: center;
+         background-repeat: no-repeat;
+         padding: 0;
+         width: 50px;
+         height: 50px;
+         background-color: transparent;
+         border: 2px solid #edf1f4;
+         border-radius: 4px;
+         font-size: 0;
+         cursor: pointer;
+         position: absolute;
+         top: -115px;
+         right: 15px;
+         &:hover{
+            border: 2px solid $buttons;
+         }
+      }
+      button.slick-prev{
+         background-image: url('../images/icons/related-prev.svg');
+         right: 85px;
+      }
+      button.slick-next{
+         background-image: url('../images/icons/related-next.svg');
+      }
+   }
+}
+.slick-slide{
+   margin: 0 15px;
+}
+.slick-track{
+   padding: 15px 0;
+}
+
+
+
+
 /*------------------------------------------------*/
 @import 'media';
