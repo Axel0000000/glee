@@ -167,28 +167,31 @@ body{
    }
    &__item-btn{
       border: none;
-      border-radius: 5px;
+      border-radius: 4px;
       font-size: 15px;
       line-height: 30px;
       @extend %rubik-400;
       text-transform: uppercase;
       cursor: pointer;
       padding: 10px 50px;
+      position: relative;
+      z-index: 1;
       &.product-detail__item-btn--active{
          position: relative;
          z-index: -1;
          opacity: 0;
+         transform: translateX(100%);
       }   
    }
    &__item-buttons{
       margin-top: -50px;
+      margin-left: 4px;
       position: relative;
-      z-index: -2;
+      z-index: -1;
       opacity: 0;
       &.product-detail__item-buttons--active{
-         z-index: 1;
+         z-index: 0;
          opacity: 1;
-         transition: all .6s;
       }
    }
 }

@@ -394,10 +394,10 @@
    flex-direction: column;
    justify-content: flex-end;
    height: 380px;
-   max-width: 270px;
+   width: 270px;
    padding: 20px 5px 35px;
    text-align: center;
-   box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+   box-shadow: 0 0 15px rgba(37, 37, 37, 0.07);
    position: relative;
    border-radius: 8px;
    &__top{
@@ -614,7 +614,7 @@
 }
 
 /*------------------------------------------------*/
-.blog{
+.insights{
    padding-top: 110px;
    margin-bottom: -170px;
    position: relative;
@@ -698,19 +698,40 @@
       padding: 17px 5px 20px;
       border-top: 1px solid #e0e0e0;
    }
-   &__item-date,
-   &__item-author{
+}
+.blog-box{
+   &__date,
+   &__author{
+      padding-left: 24px;
       font-size: 12px;
       line-height: 20px;
       @extend %rubik-400;
       color: #222933;
       text-transform: uppercase;
-      margin-right: 30px;
       transition: all .2s;
-      &:hover{
-         font-weight: 500;
-      color: $buttons;
+      position: relative;
+      &::before{
+         content: "";
+         position: absolute;
+         width: 16px;
+         height: 16px;
+         top: 0;
+         left: 0;
+         background-position: center;
+         background-repeat: no-repeat;
       }
+      &:hover{
+         color: $buttons;
+      }
+   }
+   &__author{
+      margin-left: 30px;
+   }
+   &__date::before{
+      background-image: url('../images/icons/calendar.svg');
+   }
+   &__author::before{
+      background-image: url('../images/icons/admin.svg');
    }
 }
 
@@ -755,6 +776,28 @@
       justify-content: space-between;
       padding-bottom: 30px;
       border-bottom: 2px solid #f6f6f6;
+   }
+   &__input-check{
+      @extend %checkbox-hidden;
+      &:checked + .modal__remember-checkbox{
+         background-image: url('../images/icons/login-check.svg');
+         background-position: center;
+         background-repeat: no-repeat;
+      }
+   }
+   &__remember{
+      padding-left: 28px;
+      position: relative;
+      cursor: pointer;
+   }
+   &__remember-checkbox{
+      width: 14px;
+      height: 14px;
+      border-radius: 2px;
+      background-color: #ebebeb;
+      position: absolute;
+      left: 0;
+      top: 2px;
    }
    &__remember,
    &__link-lost,
@@ -1076,7 +1119,7 @@
 }
 .filter{
    &__item{
-      margin-bottom: 60px;
+      margin-bottom: 55px;
       &:last-child{
          margin: 0;
       }
@@ -1102,6 +1145,38 @@
       }
    }
 }
+
+/*filter-category*/
+/*------------------------------------------------*/
+.filter-search{
+   &__form{
+      border: 2px solid #ebf1f3;
+      border-radius: 4px;
+      display: flex;
+   }
+   &__input{
+      border: none;
+      height: 40px;
+      padding: 0 5px;
+      width: 100%;
+   }
+   &__btn{
+      padding: 0;
+      border: none;
+      width: 46px;
+      background-color: #ebf1f3;
+      border-radius: 2px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      transition: all .3s;
+      &:hover{
+         background-color: $buttons;
+      }
+   }
+}
+
 
 /*filter-category*/
 /*------------------------------------------------*/
@@ -1263,6 +1338,60 @@
    }
 }
 
+/*------------------------------------------------*/
+.filter-post{
+   &__item{
+      display: flex;
+      margin-bottom: 20px;
+   }
+   &__imgbox{
+      min-width: 71px;
+      height: 71px;
+      margin-right: 15px;
+   }
+   &__img{
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+   }
+   &__title-link{
+      display: block;
+      font-size: 14px;
+      line-height: 20px;
+      @extend %rubik-400;
+      color: #333333;
+      margin-bottom: 5px;
+      transition: all .2s;
+      &:hover{
+         color: $buttons;
+      }
+   }
+   &__date{
+      font-size: 12px;
+      line-height: 20px;
+      @extend %rubik-400;
+      padding: 3px 0 0 20px;
+      color: #9a9a9a;
+      position: relative;
+      text-transform: uppercase;
+      transition: all .2s;
+      &:hover{
+         color: #333333;
+      }
+      &::before{
+         content:"";
+         position: absolute;
+         width: 14px;
+         height: 16px;
+         top: 0;
+         left: 0;
+         background-image: url('../images/icons/calendar-grey.svg');
+      }
+   }
+}
+
+/*------------------------------------------------*/
 .product-list{
    font-size: 16px;
    line-height: 30px;
@@ -1307,6 +1436,7 @@
 .product-item{
    &__inner{
       display: flex;
+      margin-bottom: 75px;
    }
    &__slide{
       min-width: 550px;
@@ -1350,5 +1480,188 @@
       align-items: center;
    }
 }
+
+/*------------------------------------------------*/
+.product-tabs{
+   font-size: 16px;
+   line-height: 30px;
+   @extend %rubik-400;
+   color: $title;
+   &__top{
+      display: flex;
+      justify-content: center;
+   }
+   &__top-link{
+      font-size: 18px;
+      line-height: 40px;
+      @extend %rubik-500;
+      color: $title;
+      width: 240px;
+      padding: 7px 0;
+      margin: 0 5px;
+      background-color: #edf1f4;
+      border-radius: 5px;
+      text-align: center;
+      margin-bottom: 35px;
+   }
+   &__top-link--active{
+      color: #fff;
+      background-color: $buttons;
+   }
+   &__content-item{
+      display: none;
+   }
+   &__content-item.product-tabs__content-item--active{
+      display: block;
+   }
+}
+
+/*------------------------------------------------*/
+.related{
+   padding-top: 110px;
+  &__slider{
+     margin-bottom: -15px;
+  }
+   &__title{
+      text-align: left;
+      margin-bottom: 60px;
+   }
+   &__slider-inner{
+      margin: 0 -15px;
+      button.slick-arrow{
+         background-position: center;
+         background-repeat: no-repeat;
+         padding: 0;
+         width: 50px;
+         height: 50px;
+         background-color: transparent;
+         border: 2px solid #edf1f4;
+         border-radius: 4px;
+         font-size: 0;
+         cursor: pointer;
+         position: absolute;
+         top: -115px;
+         right: 15px;
+         &:hover{
+            border: 2px solid $buttons;
+         }
+      }
+      button.slick-prev{
+         background-image: url('../images/icons/related-prev.svg');
+         right: 85px;
+      }
+      button.slick-next{
+         background-image: url('../images/icons/related-next.svg');
+      }
+   }
+}
+.slick-slide{
+   margin: 0 15px;
+}
+.slick-track{
+   padding: 15px 0;
+}
+
+/*------------------------------------------------*/
+.blog{
+   font-size: 16px;
+   line-height: 30px;
+   @extend %rubik-400;
+   color: $title;
+   padding: 120px 0;
+   &__inner{
+      display: flex;
+      justify-content: space-between;
+   }
+   &__content{
+      width: 830px;
+   }
+   &__item{
+      margin-bottom: 50px;
+   }
+   &__item-imgbox{
+      width: 100%;
+      height: 501px;
+   }
+   &__item-img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+   }
+   &__item-top{
+      position: relative;
+      margin-bottom: 30px;
+   }
+   &__item-info{
+      display: inline-flex;
+      min-width: 275px;
+      padding: 25px 5px 25px 20px;
+      background-color: $buttons;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+   }
+   .blog-box{
+      &__date::before{
+         background-image: url('../images/icons/calendar-white.svg');
+      }
+      &__author::before{
+         background-image: url('../images/icons/admin-white.svg');
+      }
+      &__date,
+      &__author{
+         color: #fff;
+         transition: all .2s;
+         &:hover{
+            color: #000;
+         }
+      }
+   }
+   &__item-title{
+      margin-bottom: 25px;
+   }
+   &__item-title-link{
+      font-size: 36px;
+      line-height: 42px;
+      @extend %rubik-400;
+      color: #333333;
+      transition: all .3s;
+      &:hover{
+         color: $buttons;
+      }
+   }
+   &__item-link{
+      display: inline-block;
+      font-size: 15px;
+      line-height: 1;
+      @extend %rubik-500;
+      color: $buttons;
+      border: 2px solid $buttons;
+      padding: 20px 80px 21px 20px;
+      position: relative;
+      transition: all .2s;
+      margin-top: 30px;
+      &::after{
+         content: "";
+         position: absolute;
+         width: 22px;
+         height: 9px;
+         right: 20px;
+         top: 24px;
+         background-image: url('../images/icons/related-next.svg');
+      }
+      &:hover{
+         border: 2px solid $title;
+      }
+   }
+   &__pagination{
+      margin-top: 75px;
+   }
+
+   &__aside{
+      width: 270px;
+   } 
+}
+
 /*------------------------------------------------*/
 @import 'media';
