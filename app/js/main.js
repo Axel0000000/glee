@@ -84,7 +84,8 @@ $(function(){
 
     $('.related__slider-inner').slick({
       slidesToShow: 4,
-      slidesToScroll: 1
+      slidesToScroll: 1,
+      infinite: false
    });
 
    var containerEl1 = document.querySelector('[data-ref="container-1"]');
