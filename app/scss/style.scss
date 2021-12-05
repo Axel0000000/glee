@@ -396,7 +396,7 @@
    width: 270px;
    padding: 20px 5px 35px;
    text-align: center;
-   box-shadow: 0 0 15px rgba(37, 37, 37, 0.07);
+   box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
    position: relative;
    border-radius: 8px;
    &__top{
@@ -618,6 +618,9 @@
    margin-bottom: -170px;
    position: relative;
    z-index: 2;
+   &__title.insights__title--contact{
+      color: $logo;
+   }
    &__items{
       display: flex;
       justify-content: space-between;
@@ -635,19 +638,30 @@
       color: #262626;
       position: relative;
       padding-right: 25px;
-      transition: all .3s;
+      transition: all .2s;
+      border-bottom: 1px solid rgba(38, 38, 38, 0);
+      &:hover{
+         border-bottom: 1px solid rgba(38, 38, 38, 1);
+      }
+      &::after{
+         content: "";
+         width: 6px;
+         height: 11px;
+         background-image: url('../images/icons/insight-arrow.svg');
+         position: absolute;
+         right: 0;
+         top: 5px;
+      }
    }
-   &__link:hover{
-      color: $default;
-   }
-   &__link::after{
-      content: "";
-      width: 6px;
-      height: 11px;
-      background-image: url('../images/icons/insight-arrow.svg');
-      position: absolute;
-      right: 0;
-      top: 5px;
+   &__link.insights__link--contact{
+      color: $logo;
+      border-bottom: 1px solid rgba(67, 99, 114, 0);
+      &:hover{
+         border-bottom: 1px solid rgba(67, 99, 114, 1);
+      }
+      &::after{
+         background-image: url('../images/icons/insight-arrow-blue.svg');
+      }
    }
    &__item{
       max-width: 370px;
@@ -696,41 +710,6 @@
       display: flex;
       padding: 17px 5px 20px;
       border-top: 1px solid #e0e0e0;
-   }
-}
-.blog-box{
-   &__date,
-   &__author{
-      padding-left: 24px;
-      font-size: 12px;
-      line-height: 20px;
-      @extend %rubik-400;
-      color: #222933;
-      text-transform: uppercase;
-      transition: all .2s;
-      position: relative;
-      &::before{
-         content: "";
-         position: absolute;
-         width: 16px;
-         height: 16px;
-         top: 0;
-         left: 0;
-         background-position: center;
-         background-repeat: no-repeat;
-      }
-      &:hover{
-         color: $buttons;
-      }
-   }
-   &__author{
-      margin-left: 30px;
-   }
-   &__date::before{
-      background-image: url('../images/icons/calendar.svg');
-   }
-   &__author::before{
-      background-image: url('../images/icons/admin.svg');
    }
 }
 
@@ -1145,13 +1124,17 @@
    }
 }
 
-/*filter-category*/
+/*filter-search*/
 /*------------------------------------------------*/
 .filter-search{
    &__form{
       border: 2px solid #ebf1f3;
       border-radius: 4px;
       display: flex;
+      transition: all .3s;
+      &:hover{
+         border: 2px solid $buttons;
+      }
    }
    &__input{
       border: none;
@@ -1170,12 +1153,8 @@
       align-items: center;
       cursor: pointer;
       transition: all .3s;
-      &:hover{
-         background-color: $buttons;
-      }
    }
 }
-
 
 /*filter-category*/
 /*------------------------------------------------*/
@@ -1378,9 +1357,6 @@
       position: relative;
       text-transform: uppercase;
       transition: all .2s;
-      &:hover{
-         color: #333333;
-      }
       &::before{
          content:"";
          position: absolute;
@@ -1548,6 +1524,10 @@
             border: 2px solid $buttons;
          }
       }
+      button.slick-arrow.slick-disabled{
+         background-color: #edf1f4;
+         border: none;
+      }
       button.slick-prev{
          background-image: url('../images/icons/related-prev.svg');
          right: 85px;
@@ -1557,8 +1537,16 @@
       }
    }
 }
+.slick-list{
+   overflow: visible;
+}
 .slick-slide{
    margin: 0 15px;
+   opacity: 0;
+   transition: all .3s;
+   &.slick-active{
+      opacity: 1;
+   }
 }
 .slick-track{
    padding: 15px 0;
@@ -1598,18 +1586,13 @@
       left: 0;
       bottom: 0;
    }
+
    &__item-title{
       margin-bottom: 25px;
-   }
-   &__item-title-link{
       font-size: 36px;
       line-height: 42px;
       @extend %rubik-400;
       color: #333333;
-      transition: all .3s;
-      &:hover{
-         color: $buttons;
-      }
    }
    &__item-link{
       display: inline-block;
@@ -1642,26 +1625,6 @@
    &__aside{
       width: 270px;
    } 
-}
-.blog-box{
-   display: inline-flex;
-   min-width: 275px;
-   padding: 25px 10px 25px 20px;
-   background-color: $buttons;
-   &__date::before{
-      background-image: url('../images/icons/calendar-white.svg');
-   }
-   &__author::before{
-      background-image: url('../images/icons/admin-white.svg');
-   }
-   &__date,
-   &__author{
-      color: #fff;
-      transition: all .2s;
-      &:hover{
-         color: #000;
-      }
-   }
 }
 
 /*------------------------------------------------*/
@@ -1945,7 +1908,6 @@
       }
    }
    &__textarea{
-      resize: none;
       height: 100%
    }
    &__btn{
@@ -1954,6 +1916,170 @@
       border: none;
    }
 }
+
+/*------------------------------------------------*/
+.contact{
+   font-size: 16px;
+   @extend %rubik-400;
+   line-height: 30px;
+   color: #565872;
+   padding-top: 110px;
+   &__top{
+      margin-bottom: 120px;
+      text-align: center;
+   }
+   &__suptitle{
+      font-size: 16px;
+      line-height: 20px;
+      @extend %poppins-700;
+      color: $buttons;
+      margin-bottom: 15px;
+   }
+   &__title{
+      font-size: 35px;
+      line-height: 57px;
+      @extend %dmsans-700;
+      color: $logo;
+      margin-bottom: 70px;
+   }
+   &__top-inner{
+      display: flex;
+      margin: 0 -15px;
+   }
+   &__top-item{
+      margin: 0 15px;
+      flex: 1 1 33.333%;
+      background-color: #fbfbfb;
+      padding: 68px 10px;
+      min-height: 385px;
+      border: 2px solid rgba(163, 187, 200, 0);
+      transition: all .3s;
+      &:hover{
+         border: 2px solid rgba(163, 187, 200, 1);
+         .contact__top-imgbox{
+            background-color: $buttons;
+         }
+         path{
+            fill: #fff;
+         }
+      }
+   }
+   &__top-imgbox{
+      width: 80px;
+      height: 80px;
+      background-color: #fff;
+      border-radius: 14px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto 60px;
+      box-shadow: 0px 6px 57px 0px rgba(37, 37, 37, 0.05);
+      transition: all .3s;
+   }
+   &__item-title{
+      font-size: 20px;
+      line-height: 26px;
+      @extend %dmsans-700;
+      color: #222222;
+      margin-bottom: 20px;
+   }
+   &__item-mail,
+   &__item-phone{
+      display: inline-block;
+      color: inherit;
+      transition: all .3s;
+      &:hover{
+         color: $buttons;
+      }
+   }
+   &__bottom{
+      margin-bottom: 10px;
+      display: flex;
+   }
+   &__form{
+      width: 100%;
+   }
+   &__map{
+      max-width: 500px;
+      width: 100%;
+      height: 335px;
+      margin-left: 50px;
+   }
+   #map{
+      width: 100%;
+      height: 100%;
+   }
+   &__form-inputs{
+      display: flex;
+      justify-content: space-between;
+   }
+   &__form-name,
+   &__form-mail{
+      width: 300px;
+      height: 50px;
+   }
+   &__text-input,
+   &__textarea{
+      display: block;
+      background-color: #fbfbfb;
+      padding: 10px 50px 10px 20px;
+      width: 100%;
+      height: 100%;
+      border: none;
+      outline: transparent;
+      color: #222222;
+      &::placeholder{
+         text-transform: uppercase;
+         color: #565872;
+      }
+      &:focus{
+         border: 1px solid $buttons;
+         &::placeholder{
+            color: #222222;
+         }
+      }
+   }
+   &__textarea{
+      height: 100%
+   }
+   &__form-name,
+   &__form-mail,
+   &__textarea-box{
+      position: relative;
+      &::after{
+         content: "";
+         position: absolute;
+         width: 18px;
+         height: 15px;
+         top: 20px;
+         right: 20px;
+         background-position: top right;
+         background-repeat: no-repeat;
+      }
+   }
+   &__form-name::after{
+      background-image: url('../images/icons/blog-name-icon.svg');
+   }
+   &__form-mail::after{
+      background-image: url('../images/icons/blog-mail.svg');
+   }
+   &__textarea-box{
+      height: 175px;
+      margin: 25px 0 30px;
+      &::after{
+         background-image: url('../images/icons/blog-comment.svg');
+      }
+   }
+   &__form-btn{
+      border: none;
+      font-size: 15px;
+      line-height: 20px;
+      text-transform: uppercase;
+      padding: 15px 44px;
+      border-radius: 4px;
+   }
+}
+ 
 
 
 /*------------------------------------------------*/
