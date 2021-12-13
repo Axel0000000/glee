@@ -56,6 +56,17 @@
    .insights{
       padding-top: 90px;
    }
+   /*--------------------------*/
+   .about{
+      padding-top: 90px;
+      &__mission{
+         margin-bottom: 90px;
+      }
+   }
+   /*--------------------------*/
+   .team{
+      padding-top: 90px;
+   }
 }
                      // 1200 PX
 /*------------------------------------------------*/
@@ -130,6 +141,57 @@
          max-width: 100%;
       }
    }
+   /*--------------------------*/
+   .about{
+      &__mission{
+         align-items: flex-start;
+      }
+      &__mission-img{
+         width: 500px;
+         margin-right: 30px;
+      }
+      &__mission-time{
+         margin-bottom: 5px;
+      }
+      &__mission-numb{
+         font-size: 130px;
+      }
+      &__mission-title{
+         margin-bottom: 15px;
+      }
+      &__mission-text{
+         margin-bottom: 30px;
+      }
+      &__mission-info{
+         padding-top: 15px;
+      }
+      &__info-item{
+         padding: 5px 5px 5px 50px;
+         &:nth-child(1)::before,
+         &:nth-child(2)::before,
+         &:nth-child(3)::before{
+            top: 12px;
+         }
+      }
+      &__info-numb{
+         font-size: 28px;
+         line-height: 34px;
+         margin-bottom: 0;
+      }
+   }
+   /*--------------------------*/
+   .progress{
+      padding: 50px 0;
+   }
+   /*--------------------------*/
+   .team{
+      &__content{
+         padding-right: 0;
+      }
+      &__title{
+         margin-bottom: 15px;
+      }
+   }
 }
                      // 1100 PX
 /*------------------------------------------------*/
@@ -170,6 +232,26 @@
       }
       &__item-descr{
          padding-right: 0;
+      }
+   }
+   /*--------------------------*/
+   .modal{
+      padding: 65px 0;
+   }
+   /*--------------------------*/
+   .team{
+      &__inner{
+         display: block;
+      }
+      &__content{
+         max-width: 100%;
+         margin: 0 0 30px 0;
+      }
+      &__item{
+         max-width: 100%;
+      }
+      &__images{
+         max-width: 100%;
       }
    }
 }
@@ -253,6 +335,11 @@
       }
       &__item-footer{
          padding: 15px;
+      }
+   }
+   .about{
+      &__mission-img{
+         width: 430px;
       }
    }
 }   
@@ -378,6 +465,41 @@
          justify-content: center;
       }
    }
+   /*--------------------------*/
+   .modal{
+      padding: 50px 0;
+   }
+   /*--------------------------*/
+   .about{
+      padding-top: 50px;
+      &__mission{
+         margin-bottom: 50px;
+      }
+      &__mission-img{
+         display: none;
+      }
+   }
+   /*--------------------------*/
+   .progress{
+      &__inner{
+         justify-content: space-between;
+      }
+      &__item-icon{
+         margin: 0 auto 5px;
+      }
+      &__item-numb{
+         font-size: 24px;
+         margin-bottom: 0;
+      }
+      &__item-text{
+         font-size: 14px;
+         line-height: 26px;
+      }
+   }
+   /*--------------------------*/
+   .team{
+      padding-top: 50px;
+   }
 }
                      // 700 PX
 /*------------------------------------------------*/
@@ -451,9 +573,32 @@
          padding: 35px;
       }
    }
+   /*--------------------------*/
    .design-video{
       height: 300px;
       background-position: 41% 11%;
+   }
+   /*--------------------------*/
+   .progress{
+      padding: 40px 0 25px;
+      &__inner{
+         flex-wrap: wrap;
+      }
+      &__item{
+         width: 50%;
+         margin-bottom: 20px;
+      }
+      &__item-icon{
+         margin: 0 auto 10px;
+      }
+      &__item-numb{
+         font-size: 36px;
+         margin-bottom:10px;
+      }
+      &__item-text{
+         font-size: 16px;
+         line-height: 28px;
+      }
    }
 }
                      // 600 PX
@@ -578,9 +723,39 @@
       }
    }
    /*--------------------------*/
+   .insights{
+      &__top{
+         display: block;
+         width: 100%;
+      }
+      &__title{
+         text-align: left;
+      }
+      &__link{
+         margin-left: auto;
+      }
+   }
+   /*--------------------------*/
    .partners{
       padding: 40px 0 20px;
+   }
+   /*--------------------------*/
+   .about{
+      &__mission-info{
+         display: block;
+      }
+      &__info-item{
+         border-right: none;
+         margin: 0 0 10px 0;
+         border-bottom: 1px solid #e6eaf0;
+      }
    } 
+   /*--------------------------*/
+   .team{
+      &__images{
+         grid-template-columns: repeat(1, 1fr);
+      }
+   }
 }
 
                      // 420 PX
@@ -679,15 +854,14 @@
          }
       }
    }
+   /*--------------------------*/
    .design-video{
       height: 200px;
       background-position: 42% 11%;
    }
    /*--------------------------*/
-   .insights{
+      .insights{
       padding-top: 35px;
-      /*--------------------------*/
-   .insights{
       &__item-descr{
          margin: 0 15px;
       }
@@ -698,5 +872,38 @@
          padding: 15px;
       }
    }
+   /*--------------------------*/
+   .modal{
+      padding: 35px 0;
+      &__remember{
+         padding-left: 20px;
+      }
+   }
+   /*--------------------------*/
+   .about{
+      padding-top: 35px;
+      &__mission{
+         margin-bottom: 35px;
+      }
+   }
+   /*--------------------------*/
+   .progress{
+      &__inner{
+         display: block;
+      }
+      &__item{
+         width: 100%;
+      }
+   }
+   /*--------------------------*/
+   .team{
+      padding-top: 35px;
+      &__item-bottom{
+         display: block;
+         padding: 10px;
+      }
+      &__item-social{
+         justify-content: right;
+      }
    }
 }
