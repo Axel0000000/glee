@@ -1,11 +1,24 @@
 $(function(){
 
+   $('.footer-top__title-account').on('click', function(){
+      $(this).toggleClass('footer-top__title--active');
+      $(this).next().slideToggle();
+   });
+   $('.footer-top__title-services').on('click', function(){
+      $(this).toggleClass('footer-top__title--active');
+      $(this).next().slideToggle();
+   });
+
+   $('.header__burger-btn').on('click', function(){
+      $('.menu').toggleClass('menu--active');
+   });
+
    $('.product-tabs__top-link').on('click', function(e){
       e.preventDefault();
       $('.product-tabs__top-link').removeClass('product-tabs__top-link--active');
       $(this).addClass('product-tabs__top-link--active');
       $('.product-tabs__content-item').removeClass('product-tabs__content-item--active');
-      $($(this).attr('href')).addClass('product-tabs__content-item--active')
+      $($(this).attr('href')).addClass('product-tabs__content-item--active');
    });
 
    $('.product-slide__vertical').slick({
@@ -27,19 +40,17 @@ $(function(){
    $('.product-detail__item-btn').on('click', function(evt){
       evt.preventDefault();
       $(this).addClass('product-detail__item-btn--active');
-      $('.product-detail__item-buttons').addClass('product-detail__item-buttons--active');
-      $('.button-cart').addClass('icon-buttons__item--active')
+      $(this).next().addClass('product-detail__item-buttons--active');
    });
 
-   $('.button-cart').on('click', function(evt){
+   $('.icon-buttons__cart').on('click', function(evt){
       evt.preventDefault();
-      $('.product-detail__item-btn').removeClass('product-detail__item-btn--active');
-      $('.product-detail__item-buttons').removeClass('product-detail__item-buttons--active')
+      $(this).toggleClass('icon-buttons__cart--active');
    });
 
-   $('.icon-buttons__item').on('click', function(evt){
+   $('.icon-buttons__like').on('click', function(evt){
       evt.preventDefault();
-      $(this).toggleClass('icon-buttons__item--active')
+      $(this).toggleClass('icon-buttons__like--active');
    });
 
    $('.product-detail__input').styler();
@@ -70,7 +81,7 @@ $(function(){
       ratedFill: "#ffcc00",
       readOnly: true,
       fullStar: true,
-      spacing: "4px",
+      spacing: "4px"
     });
 
     $(".product-detail__star").rateYo({
@@ -79,7 +90,7 @@ $(function(){
       ratedFill: "#ffcc00",
       readOnly: true,
       fullStar: true,
-      spacing: "10px",
+      spacing: "10px"
     });
 
     $('.related__slider-inner').slick({
