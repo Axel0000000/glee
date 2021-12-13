@@ -23,6 +23,12 @@ body{
    margin: 0 auto;
    padding: 0 15px;
 }
+/*------------------------------------------------*/
+.container-large{
+   max-width: 1800px;
+   margin: 0 auto;
+   padding: 0 15px;
+}
 
 /*------------------------------------------------*/
 .title{
@@ -187,5 +193,54 @@ body{
    }
    &__author{
       margin-left: 20px;
+   }
+}
+
+
+
+                     // 900 PX
+/*------------------------------------------------*/
+@media (max-width: 900px){
+   .title,
+   .title-alt{
+      font-size: 32px;
+      line-height: 44px;
+   }
+}
+                     // 1000 PX
+/*------------------------------------------------*/
+@media (max-width: 1000px){
+   .blog-box{
+      &__author{
+         margin-left: 15px;
+      }
+   }
+}
+                     // 700 PX
+/*------------------------------------------------*/
+@media (max-width: 700px){
+   .gallery-buttons{
+      &__btn + .gallery-buttons__btn{
+         margin-left: 16px;
+      }
+   }
+}
+
+                     // 420 PX
+/*------------------------------------------------*/
+@media (max-width: 420px){
+   .title,
+   .title-alt{
+      font-size: 26px;
+      line-height: 32px;
+   }
+   .gallery-buttons{
+      &__btn{
+         display: block;
+         margin-bottom: 8px;
+      }
+      &__btn + .gallery-buttons__btn{
+         margin-left: 0;
+      }
    }
 }

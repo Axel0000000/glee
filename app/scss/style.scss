@@ -199,13 +199,16 @@
 }
 .partners{
    background-color: #fef7f0;
-   padding: 265px 0 90px;
+   padding: 265px 0 70px;
    position: relative;
    z-index: -1;
    &__inner{
       display: flex;
       justify-content: space-around;
       align-items: center;
+   }
+   &__logo{
+      margin: 0 15px 20px;
    }
 }
 .footer-top{
@@ -298,22 +301,21 @@
    background-image: url('../images/intro-slider-bg.png');
    background-repeat: no-repeat;
    background-position: 90% center;
-   &__inner{
-      height: 100vh;
-   }
    &__item-inner{
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
-      padding: 215px 0 0;
+      padding: 215px 0 280px;
    }
    &__content{
-      width: 500px;
+      flex: 0 0 500px;
+   }
+   &__imgbox{
+      flex: 0 1 auto;
    }
    &__img{
-      width: 640px;
-      height: 264px;
-      object-fit: contain;
+      width: 100%;
+      object-fit: cover;
    }
    &__title{
       font-size: 72px;
@@ -529,19 +531,22 @@
    &__item{
       background-color: #feefe2;
       display: flex;
-      justify-content: right;
       align-items: center;
-      padding: 10px 145px 10px 10px;
-      position: relative;
+      padding: 10px 10px 10px 130px;
+   }
+   &__item-imgbox{
+      width: 240px;
+      margin-top: -175px;
+      margin-right: 20px;
    }
    &__item-image{
-      position: absolute;
-      left: 135px;
-      bottom: 85px;
+      min-width: 100%;
+      height: 405px;
+      object-fit: contain;
    }
    &__item-content{
       color: $title;
-      max-width: 335px;
+      max-width: 340px;
    }
    &__item-title{
       font-size: 26px;
@@ -640,6 +645,8 @@
 
 /*------------------------------------------------*/
 .design-video{
+   background-position: center;
+   background-repeat: no-repeat;
    height: 500px;
    display: flex;
    justify-content: center;
@@ -667,7 +674,7 @@
    }
    &__items{
       display: flex;
-      justify-content: space-between;
+      margin: 0 -15px;
    }
    &__top{
       display: flex;
@@ -709,18 +716,23 @@
    }
    &__item{
       max-width: 370px;
+      width: 100%;
       min-height: 100%;
       display: flex;
       flex-direction: column;
       box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
       background-color: #fff;
+      border-radius: 4px;
+      margin: 0 15px;
    }
    &__item-top{
       position: relative;
       margin-bottom: 33px;
+      width: 100%;
    }
    &__item-image{
-      height: 250px;
+      width: 100%;
+      height: 100%;
       object-fit: cover;
    }
    &__item-link{
@@ -736,7 +748,9 @@
    }
    &__item-descr{
       flex: 1 1 auto;
-      padding: 0 45px 5px 30px;
+      padding: 0 15px 5px 0;
+      margin: 0 30px;
+      border-bottom: 1px solid #e0e0e0;
    }
    &__item-descrlink{
       font-size: 18px;
@@ -749,11 +763,11 @@
       color: $buttons;
    }
    &__item-footer{
-      width: 318px;
+      max-width: 310px;
+      width: 100%;
       margin: 0 auto;
       display: flex;
-      padding: 17px 5px 20px;
-      border-top: 1px solid #e0e0e0;
+      padding: 17px 0 20px;
    }
 }
 
