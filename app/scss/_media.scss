@@ -67,6 +67,17 @@
    .team{
       padding-top: 90px;
    }
+   /*--------------------------*/
+   .conditions{
+      padding-top: 90px;
+   }
+   /*--------------------------*/
+   .contact{
+      padding-top: 90px;
+      &__top{
+         margin-bottom: 90px;
+      }
+   }
 }
                      // 1200 PX
 /*------------------------------------------------*/
@@ -190,6 +201,41 @@
       }
       &__title{
          margin-bottom: 15px;
+      }
+   }
+   /*--------------------------*/
+   .contact{
+      &__form-inputs{
+         display: block;
+      }
+      &__form-name,
+      &__form-mail{
+         margin-bottom: 15px;
+         width: 100%;
+      }
+      &__textarea-box{
+         margin: 15px 0;
+      }
+      &__map{
+         margin-left: 20px;
+         height: 304px;
+      }
+   }
+   /*--------------------------*/
+   .blog{
+      padding: 90px 0;
+      &__inner{
+         flex-direction: column;
+      }
+      &__content{
+         width: 100%;
+      }
+      &__aside{
+         order: -1;
+         width: 100%;
+      }
+      .filter-post{
+         display: none;
       }
    }
 }
@@ -340,6 +386,25 @@
    .about{
       &__mission-img{
          width: 430px;
+      }
+   }
+   /*--------------------------*/
+   .contact{
+      &__top-inner{
+         margin: 0 -10px;
+      }
+      &__top-imgbox{
+         margin-bottom: 40px;
+      }
+      &__top-item{
+         padding: 40px 5px;
+         margin: 0 10px;
+      }
+      &__item-phone,
+      &__item-mail,
+      &__item-address{
+         font-size: 14px;
+         line-height: 18px;
       }
    }
 }   
@@ -500,6 +565,74 @@
    .team{
       padding-top: 50px;
    }
+   /*--------------------------*/
+   .conditions{
+      padding-top: 50px;
+      &__item{
+         margin-bottom: 50px;
+      }
+   }
+   /*--------------------------*/
+   .contact{
+      padding-top: 50px;
+      &__top{
+         margin-bottom: 50px;
+      }
+      &__suptitle{
+         margin-bottom: 10px;
+      }
+      &__title{
+         margin-bottom: 35px;
+      }
+      &__top-inner{
+         display: block;
+      }
+      &__top-imgbox{
+         margin: 0 auto 30px;
+      }
+      &__top-item{
+         padding: 35px 0;
+         margin: 0 0 20px 0;
+      }
+      &__item-phone,
+      &__item-mail,
+      &__item-address{
+         font-size: 16px;
+         line-height: 26px;
+         display: block;
+      }
+      &__bottom{
+         display: block;
+         margin: 0;
+      }
+      &__form{
+         margin-bottom: 25px
+      }
+      &__map{
+         margin: 0;
+         max-width: 100%;
+         height: 350px;
+      }
+   }
+   /*--------------------------*/
+   .blog{
+      padding: 50px 0;
+      &__item{
+         margin-bottom: 40px;
+      }
+      &__item-img{
+         height: 400px;
+      }
+      &__pagination{
+         margin-top: 50px;
+      }
+   }
+   /*--------------------------*/
+   .filter{
+      &__item{
+         margin-bottom: 35px;
+      }
+   }
 }
                      // 700 PX
 /*------------------------------------------------*/
@@ -600,6 +733,12 @@
          line-height: 28px;
       }
    }
+   /*--------------------------*/
+   .blog{
+      &__item-img{
+         height: 320px;
+      }
+   }
 }
                      // 600 PX
 /*------------------------------------------------*/
@@ -683,6 +822,14 @@
       }
    }
    /*--------------------------*/
+   .top{
+      &__title{
+         font-size: 30px;
+         line-height: 38px;
+      }
+   }
+
+   /*--------------------------*/
    .products{
       &__gallery-items{
          grid-template-columns: repeat(1, 1fr);
@@ -756,6 +903,12 @@
          grid-template-columns: repeat(1, 1fr);
       }
    }
+   /*--------------------------*/
+   .contact{
+      &__map{
+         height: 280px;
+      }
+   }     
 }
 
                      // 420 PX
@@ -904,6 +1057,81 @@
       }
       &__item-social{
          justify-content: right;
+      }
+   }
+   /*--------------------------*/
+   .conditions{
+      padding-top: 35px;
+      &__item{
+         margin-bottom: 30px;
+      }
+      &__item-title{
+         margin-bottom: 15px;
+         font-size: 20px;
+         line-height: 26px;
+      }
+   }
+   /*--------------------------*/
+   .contact{
+      padding-top: 35px;
+      &__top{
+         margin-bottom: 35px;
+      }
+      &__suptitle{
+         margin-bottom: 0;
+      }
+      &__title{
+         font-size: 30px;
+         line-height: 42px;
+         margin-bottom: 25px;
+      }
+      &__top-item{
+         padding: 25px 0;
+      }
+      &__top-imgbox{
+         margin: 0 auto 20px;
+      }
+      &__item-title{
+         margin-bottom: 15px;
+      }
+      &__item-phone,
+      &__item-mail,
+      &__item-address{
+         font-size: 14px;
+         line-height: 22px;
+      }
+      &__map{
+         height: 220px;
+      }
+   }
+   /*--------------------------*/
+   .blog{
+      padding: 35px 0;
+      &__item-top{
+         margin-bottom: 25px;
+      }
+      &__item-img{
+         height: 250px;
+      }
+      &__item-info{
+         right: 0;
+      }
+      &__item-title{
+         font-size: 28px;
+         line-height: 34px;
+         margin-bottom: 10px;
+      }
+      &__item-link{
+         margin-top: 12px;
+      }
+      &__pagination{
+         margin-top: 35px;
+      }
+   }
+   /*--------------------------*/
+   .filter{
+      &__item{
+         margin-bottom: 25px;
       }
    }
 }

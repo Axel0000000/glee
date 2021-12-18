@@ -130,7 +130,7 @@ body{
    &__author{
       padding-left: 24px;
       font-size: 12px;
-      line-height: 20px;
+      line-height: 16px;
       @extend %rubik-400;
       color: #222933;
       text-transform: uppercase;
@@ -224,6 +224,9 @@ body{
          margin-left: 16px;
       }
    }
+   .box-blog{
+      padding: 15px 5px 15px 10px;
+   }
 }
 
                      // 420 PX
@@ -241,6 +244,16 @@ body{
       }
       &__btn + .gallery-buttons__btn{
          margin-left: 0;
+      }
+   }
+   .box-blog{
+      padding: 8px 5px;
+      min-width: 100%;
+   }
+   .pagination{
+      &__prev,
+      &__next{
+         display: none;
       }
    }
 }

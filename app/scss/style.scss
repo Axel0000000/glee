@@ -160,6 +160,8 @@
 .breadcrumbs{
    &__list{
       display: inline-flex;
+      flex-wrap: wrap;
+      justify-content: center;
    }
    &__item{
       position: relative;
@@ -2164,7 +2166,6 @@
       flex: 1 1 33.333%;
       background-color: #fbfbfb;
       padding: 68px 10px;
-      min-height: 385px;
       border: 2px solid rgba(163, 187, 200, 0);
       transition: all .3s;
       &:hover{
