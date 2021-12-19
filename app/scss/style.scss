@@ -1971,14 +1971,6 @@
          } 
       }
    }
-   .blog-one__left-img{
-      float: left;
-      margin-right: 30px;
-   }
-   .blog-one__right-img{
-      float: right;
-      margin-left: 30px;
-   }
    h5{
       padding-top: 20px; 
       display: block;
@@ -1991,6 +1983,20 @@
       color: #565872;
       margin-bottom: 40px;
    } 
+}
+.blog-one__left-img,
+.blog-one__right-img{
+   width: 323px;
+   height: 210px;
+   object-fit: cover;
+}
+.blog-one__left-img{
+   float: left;
+   margin-right: 30px;
+}
+.blog-one__right-img{
+   float: right;
+   margin-left: 30px;
 }
 .comments{
    color: #565872;
@@ -2028,11 +2034,13 @@
       line-height: 18px;
       @extend %rubik-700;
       color: #436372;
+      padding-right: 10px;
    }
    &__item-data{
       font-size: 14px;
       line-height: 16px;
       color: #a1a1a1;
+      padding-top: 2px;
    }
    &__item-text{
       margin-bottom: 15px;
