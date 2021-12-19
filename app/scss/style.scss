@@ -1132,8 +1132,12 @@
       display: flex;
    }
    &__filters{
-      min-width: 270px;
+      max-width: 270px;
+      width: 100%;
       margin-right: 30px;
+   }
+   &__filters-btn{
+      display: none;
    }
    &__content{
       width: 100%;

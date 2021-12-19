@@ -1,5 +1,9 @@
 $(function(){
 
+   $('.product__filters-btn').on('click', function(){
+      $('.product__filters').toggleClass('product__filters--active');
+   });
+
    $('.footer-top__title-account').on('click', function(){
       $(this).toggleClass('footer-top__title--active');
       $(this).next().slideToggle();

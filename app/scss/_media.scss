@@ -50,32 +50,6 @@
          max-width: 320px;
       }
    }
-   /*--------------------------*/
-   .insights{
-      padding-top: 90px;
-   }
-   /*--------------------------*/
-   .about{
-      padding-top: 90px;
-      &__mission{
-         margin-bottom: 90px;
-      }
-   }
-   /*--------------------------*/
-   .team{
-      padding-top: 90px;
-   }
-   /*--------------------------*/
-   .conditions{
-      padding-top: 90px;
-   }
-   /*--------------------------*/
-   .contact{
-      padding-top: 90px;
-      &__top{
-         margin-bottom: 90px;
-      }
-   }
 }
                      // 1200 PX
 /*------------------------------------------------*/
@@ -144,6 +118,7 @@
    }
    /*--------------------------*/
    .insights{
+      padding-top: 90px;
       &__item-footer{
          justify-content: space-between;
          padding: 15px 30px;
@@ -151,8 +126,14 @@
       }
    }
    /*--------------------------*/
+   .conditions{
+      padding-top: 90px;
+   }
+   /*--------------------------*/
    .about{
+      padding-top: 90px;
       &__mission{
+         margin-bottom: 90px;
          align-items: flex-start;
       }
       &__mission-img{
@@ -194,6 +175,7 @@
    }
    /*--------------------------*/
    .team{
+      padding-top: 90px;
       &__content{
          padding-right: 0;
       }
@@ -203,6 +185,10 @@
    }
    /*--------------------------*/
    .contact{
+      padding-top: 90px;
+      &__top{
+         margin-bottom: 90px;
+      }
       &__form-inputs{
          display: block;
       }
@@ -242,6 +228,54 @@
       &__item.comments__item--reply{
          max-width: 100%;
          margin-left: 130px;
+      }
+   }
+   /*--------------------------*/
+   .product{
+      padding: 90px 0;
+      &__content-inner{
+         margin-bottom: 90px;
+      }
+      .gallery-item{
+         min-width: 270px;
+         width: 100%;
+      }
+      &__inner{
+         display: block;
+         position: relative;
+      }
+      &__filters{
+         background-color:rgba(249, 249, 249, 0.9);
+         position: absolute;
+         left: 0;
+         top: 0;
+         z-index: 10;
+         max-width: 550px;
+         margin: 0;
+         transform: translateX(-200%);
+         transition: all .4s;
+         &.product__filters--active{
+            transform: translateX(0);
+         }
+      }
+      &__filters-btn{
+         display: block;
+         width: 60px;
+         height: 60px;
+         border: none;
+         padding: 0;
+         background-color: #edf1f4;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         position: fixed;
+         z-index: 11;
+         right: 0;
+         bottom: 100px;
+         cursor: pointer;
+      }
+      .recent{
+         display: none;
       }
    }
 }
@@ -307,7 +341,6 @@
       }
    }
 }
-
                     // 1000 PX
 /*------------------------------------------------*/
 @media (max-width: 1000px){
@@ -411,6 +444,12 @@
       &__item-address{
          font-size: 14px;
          line-height: 18px;
+      }
+   }
+   /*--------------------------*/
+   .product{
+      &__content-inner{
+         grid-gap: 25px;
       }
    }
 }   
@@ -649,6 +688,14 @@
    .comments-form{
       padding-top: 40px;
    }
+   /*--------------------------*/
+   .product{
+      padding: 50px 0;
+      &__content-inner{
+         margin-bottom: 50px;
+         grid-template-columns: repeat(2, 1fr);
+      }
+   }
 }
                      // 700 PX
 /*------------------------------------------------*/
@@ -799,6 +846,12 @@
       }
       &__textarea-box{
          margin: 20px 0;
+      }
+   }
+   /*--------------------------*/
+   .product{
+      &__content-inner{
+         grid-gap: 20px;
       }
    }
 }
@@ -983,6 +1036,12 @@
       }
       &__author-info{
          margin-bottom: 10px;
+      }
+   }
+   /*--------------------------*/
+   .product{
+      &__content-inner{
+         grid-template-columns: repeat(1, 1fr);
       }
    }     
 }
@@ -1264,6 +1323,13 @@
       &__item-data{
          display: block;
          text-align: right;
+      }
+   }
+   /*--------------------------*/
+   .product{
+      padding: 35px 0;
+      &__content-inner{
+         margin-bottom: 35px;
       }
    }
 }
