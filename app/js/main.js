@@ -3,6 +3,9 @@ $(function(){
    $('.product__filters-btn').on('click', function(){
       $('.product__filters').toggleClass('product__filters--active');
    });
+   $('.product-list__filters-btn').on('click', function(){
+      $('.product-list__filters').toggleClass('product-list__filters--active');
+   });
 
    $('.footer-top__title-account').on('click', function(){
       $(this).toggleClass('footer-top__title--active');
