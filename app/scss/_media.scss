@@ -287,6 +287,23 @@
          margin-right: 35px;
       }
    }
+   /*--------------------------*/
+   .product-one{
+      padding-top: 90px;
+   }
+   /*--------------------------*/
+   .product-item{
+      &__inner{
+         margin-bottom: 50px;
+      }
+   }
+   /*--------------------------*/
+   .related{
+      padding-top: 90px;
+      .gallery-item{
+         width: 100%;
+      }
+   }
 }
                      // 1100 PX
 /*------------------------------------------------*/
@@ -386,6 +403,12 @@
       }
       .recent{
          display: none;
+      }
+   }
+   /*--------------------------*/
+   .product-item{
+      &__slide{
+         margin-right: 30px;
       }
    }
 }
@@ -498,6 +521,16 @@
    .product{
       &__content-inner{
          grid-gap: 25px;
+      }
+   }
+   .product-item{
+      &__slide{
+         min-width: auto;
+      }
+   }
+   .product-slide{
+      &__vertical{
+         display: none;
       }
    }
 }   
@@ -755,6 +788,59 @@
          height: 420px;
       }
    }
+   /*--------------------------*/
+   .product-one{
+      padding-top: 50px;
+   }
+   /*--------------------------*/
+   .product-item{
+      &__inner{
+         margin-bottom: 35px;
+      }
+   }
+   /*--------------------------*/
+   .related{
+      padding-top: 50px;
+      &__title{
+         margin-bottom: 40px;
+      }
+      &__slider-inner{
+         button.slick-arrow{
+            top: -90px;
+         }
+      }
+   }
+}
+                     // 830 PX
+/*------------------------------------------------*/
+@media (max-width: 830px){
+   .product-item{
+      &__inner{
+         display: block;
+      }
+      &__slide{
+         margin-right: 0;
+      }
+      &__content{
+         margin-top: 35px;
+      }
+   }
+   /*--------------------------*/
+   .product-slide{
+      &__big{
+         margin: 0 auto;
+         max-width: 400px;
+      }
+   }
+   /*--------------------------*/
+   .product-tabs{
+      &__top{
+         flex-direction: column;
+      }
+      &__top-link{
+         margin-bottom: 5px;
+      }
+   }
 }
                      // 700 PX
 /*------------------------------------------------*/
@@ -768,7 +854,7 @@
             position: absolute;
             left: 0;
             top: 90px;
-            z-index: 2;
+            z-index: 14;
             &__list{
                flex-direction: column;
             }
@@ -919,21 +1005,21 @@
          min-width: 250px;
          height: 370px;
       }
-      .product-detail{
-         &__title{
-            font-size: 32px;
-            line-height: 38px;
-            margin-bottom: 10px;
-         }
-         &__star{
-            margin-bottom: 15px;
-         }
-         &__item-price{
-            margin-bottom: 15px;
-         }
-         &__item-text{
-            margin-bottom: 25px;
-         }
+   }
+   .product-detail{
+      &__title{
+         font-size: 32px;
+         line-height: 38px;
+         margin-bottom: 10px;
+      }
+      &__star{
+         margin-bottom: 15px;
+      }
+      &__item-price{
+         margin-bottom: 15px;
+      }
+      &__item-text{
+         margin-bottom: 25px;
       }
    }
 }
@@ -1025,7 +1111,6 @@
          line-height: 38px;
       }
    }
-
    /*--------------------------*/
    .products{
       &__gallery-items{
@@ -1130,6 +1215,20 @@
    .product-list{
       &__item-imgbox{
          display: none;
+      }
+   }
+   /*--------------------------*/
+   .related{
+      &__title{
+         margin-bottom: 55px;
+      }
+      &__slider-inner{
+         button.slick-arrow{
+            top: -50px;
+         }
+         button.slick-prev{
+            right: 95px;
+         }
       }
    }     
 }
@@ -1426,5 +1525,38 @@
          margin-bottom: 40px;
       }
       padding: 35px 0;
+   }
+   /*--------------------------*/
+   .product-one{
+      padding-top: 35px;
+   }
+   /*--------------------------*/
+   .product-item{
+      &__inner{
+         margin-bottom: 20px;
+      }
+   }
+   /*--------------------------*/
+   .product-detail{
+      &__form{
+         flex-direction: column;
+      }
+      &__input{
+         margin-bottom: 20px;
+      }
+      &__add{
+         order: -1;
+         margin-bottom: 25px;
+      }
+   }
+   /*--------------------------*/
+   .product-tabs{
+      &__top{
+         margin-bottom: 25px;
+      }
+   }
+   /*--------------------------*/
+   .related{
+      padding-top: 35px;
    }
 }
