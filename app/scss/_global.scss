@@ -2,7 +2,6 @@ html,
 body{
    height: 100%;
 }
-
 body{
    font-size: 14px;
    line-height: 24px;
@@ -11,12 +10,10 @@ body{
    display: flex;
    flex-direction: column;
 }
-
 /*------------------------------------------------*/
 .main{
    flex: 1 1 auto;
 }
-
 /*------------------------------------------------*/
 .container{
    max-width: 1200px;
@@ -29,7 +26,6 @@ body{
    margin: 0 auto;
    padding: 0 15px;
 }
-
 /*------------------------------------------------*/
 .title{
    font-size: 36px;
@@ -45,7 +41,6 @@ body{
    color: $title;
    text-align: left;
 }
-
 /*------------------------------------------------*/
 .gallery-buttons{
    text-align: center;
@@ -69,7 +64,6 @@ body{
       margin-left: 24px;
    }
 }
-
 /*------------------------------------------------*/
 .button{
    color: #fff;
@@ -80,7 +74,6 @@ body{
 .button:hover{
    background-color: $title;
 }
-
 /*------------------------------------------------*/
 .pagination{
       display: flex;
@@ -119,7 +112,6 @@ body{
       padding: 0 20px;
    }
 }
-
 /*------------------------------------------------*/
 .partners.partners--active{
    padding: 90px 0;
@@ -130,7 +122,7 @@ body{
    &__author{
       padding-left: 24px;
       font-size: 12px;
-      line-height: 20px;
+      line-height: 16px;
       @extend %rubik-400;
       color: #222933;
       text-transform: uppercase;
@@ -157,7 +149,6 @@ body{
       background-image: url('../images/icons/admin.svg');
    }
 }
-
 /*------------------------------------------------*/
 .box-blog{
    display: inline-flex;
@@ -195,9 +186,6 @@ body{
       margin-left: 20px;
    }
 }
-
-
-
                      // 900 PX
 /*------------------------------------------------*/
 @media (max-width: 900px){
@@ -224,8 +212,10 @@ body{
          margin-left: 16px;
       }
    }
+   .box-blog{
+      padding: 15px 5px 15px 10px;
+   }
 }
-
                      // 420 PX
 /*------------------------------------------------*/
 @media (max-width: 420px){
@@ -241,6 +231,16 @@ body{
       }
       &__btn + .gallery-buttons__btn{
          margin-left: 0;
+      }
+   }
+   .box-blog{
+      padding: 8px 5px;
+      min-width: 100%;
+   }
+   .pagination{
+      &__prev,
+      &__next{
+         display: none;
       }
    }
 }
